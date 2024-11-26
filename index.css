@@ -1,0 +1,207 @@
+/* General Reset */
+body, h1, h2, h3, p, ul, li, a, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+header nav ul li {
+    margin: 0 1rem;
+}
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+header .auth-buttons {
+    display: flex;
+    gap: 1rem;
+}
+header .login-btn, .register-btn {
+    background-color: #fff;
+    color: #4CAF50;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+}
+header .register-btn:hover, .login-btn:hover {
+    background-color: #45a049;
+    color: white;
+}
+
+header .dropdown {
+    position: relative;
+}
+header .dropdown-content {
+    position: absolute;
+    top: 2.5rem;
+    left: 0;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 10;
+}
+header .dropdown-content a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #333;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+header .dropdown-content a:hover {
+    background-color: #f4f4f4;
+}
+
+/* Main Section */
+main {
+    padding: 2rem 0;
+}
+main h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-size: 2rem;
+}
+.filters {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.filters .filter-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+.filters .filter-btn:hover {
+    background-color: #45a049;
+}
+.filters .filter-btn.active {
+    background-color: #333;
+    color: white;
+}
+
+.companies-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+.company-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s;
+}
+.company-card:hover {
+    transform: translateY(-5px);
+}
+.company-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+.company-card h3 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1.2rem;
+    color: #4CAF50;
+}
+.company-card p {
+    padding: 0 1rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+.company-card .view-jobs {
+    display: inline-block;
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+.company-card .view-jobs:hover {
+    background-color: #45a049;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+}
+footer p {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+footer .social-icons a {
+    margin: 0 0.5rem;
+}
+footer .social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+footer .social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header .container {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+    }
+    header .auth-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .companies-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
